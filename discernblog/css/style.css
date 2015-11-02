@@ -299,8 +299,8 @@ body {
 .blog_tags {
     background-color: #fff;
     font-family: 'Gotham-Book';
-    padding: 20px 0;
-    margin: 10px 20px;
+    padding: 20px;
+    margin: 10px 0;
     color: red;
     box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.2) inset;
     font-size: 13px;
@@ -659,19 +659,19 @@ figure {
     padding: 30px 60px 50px 60px;*/
 }
 
-.blog_right .form_comments h3{
+.blog_right .form_comments h3 {
     padding: 0;
     text-transform: none;
     font-weight: bold;
     border: 0;
 }
 
-.blog_right .form_comments p{
+.blog_right .form_comments p {
     padding: 5px 0;
 }
 
-.blog_right .form_comments #edit-name, .blog_right .form_comments #edit-subject{
-display: none;
+.blog_right .form_comments #edit-name, .blog_right .form_comments #edit-subject {
+    display: none;
 }
 
 .form_comments h2 {
@@ -834,9 +834,20 @@ body.not-front .blog_left span {
 }
 
 @media only screen and ( max-width: 768px) and (min-width: 320px) {
-    .comment{
+    .region{
+        float: none !important;
+    }
+    #main-menu-links a {
+        color: #717171;
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .comment {
         margin: 10px !important;
     }
+
     .menu {
         width: 100%;
     }
@@ -1024,7 +1035,8 @@ body.not-front .blog_left span {
         padding: 10px;
         padding-bottom: 20px;
     }
-    #comments{
+
+    #comments {
         margin-top: 0;
     }
 
@@ -1298,39 +1310,43 @@ img {
     height: auto;
 }
 
-.comment{
+.comment {
     text-align: left;
     margin: 10px 20px;
 }
 
-.comment .submitted{
+.comment .submitted {
     border: 1px solid #c8c8c8;
     padding: 10px 20px;
 }
 
-.comment .commenter-name, .comment .comment-time{
+.comment .commenter-name, .comment .comment-time {
     float: left;
     margin-right: 10px;
     padding: 0;
 }
 
-.comment .comment-permalink{
+.comment .comment-permalink {
     display: none;
 }
 
-.comment .comment-text .content{
+.comment .comment-text .content {
     margin: 10px;
     font-size: 13px;
 }
 
-.comment .comment-text .links{
+.comment .comment-text .links {
     display: none;
 }
 
-.comment .comment-text h3{
+.comment .comment-text h3 {
     display: none;
 }
 
+.full-width-imp{
+    width: auto;
+    float: none;
+}
 
 
 
