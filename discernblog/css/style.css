@@ -986,7 +986,7 @@ body.not-front .blog_left span {
         display: none;
         background-color: #fff;
         width: 100%;
-        z-index: 999;
+        z-index: 99999;
         min-height: 285px;
         position: absolute;
         top: 88px;
