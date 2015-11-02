@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 	$(".menu_icon").click( function(){
 		$(this).toggleClass("hamIcon");
-		$(".all_menu").slideToggle();
+		$(".all_menu").toggle();
 	});
 
     var isPaginationInProgress = false,
