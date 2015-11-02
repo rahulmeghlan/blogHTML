@@ -45,7 +45,7 @@ body{ background-color:#f3f3f3; padding:0px; margin:0px;}
 .nav {float:left;  padding:0px; margin:0px; font-family:'Gotham-Book';}
 .nav li { float:left; list-style:none; }
 .nav li  a { text-decoration:none; text-transform:uppercase; font-size:13px; color:#717171; font-weight:bold; padding:20px 0px 0px 0px; margin-right:53px; display: inline-block;}
-.nav li  a:hover { color:#e8503c;} 
+.nav li  a:hover { color:#e8503c;}
 
 .social_links { float:left; margin:0px; padding:20px 0px 0px 0px;}
 .social_links li { float:left; list-style:none; }
@@ -62,6 +62,10 @@ body{ background-color:#f3f3f3; padding:0px; margin:0px;}
 .not-front .blog_container {margin:0;}
 .blog_container { width:1000px; float:left; margin:20px 0px 0px 0px; }
 .blog_right { width:720px; float:left;  background-color:#fff; text-align:center; font-family:'Gotham-Book';}
+
+.node-type-article .blog_right .field p{text-align: left; padding: 10px 20px;}
+.node-type-article h5{margin: 10px 0;}
+
 .blog_right h3 { display: inline-block; font-family:'Gotham-Book'; margin:0px; padding:33px 0px 15px 0px; color:#28aebd; font-size:13px; text-transform:uppercase; font-weight:normal; border-bottom:1px solid #d4d4d4; }
 .blog_right p { color:#717171; font-size:12px; padding:20px 0px 15px 0px; margin:0px;}
 .blog_right h2 { font-family:'Gotham-Book'; margin:0px; padding:15px 0px 15px 0px; color:#717171 !important; font-size:20px; text-transform:uppercase; font-weight:normal;  }
@@ -77,7 +81,13 @@ body{ background-color:#f3f3f3; padding:0px; margin:0px;}
 .blog_left h4 { font-family:'Gotham-Book'; margin:0px; padding:15px 0px 36px 0px; color:#e8503c; font-size:14px; text-transform:uppercase; font-weight:bold;  }
 .blog_left .pic { position:absolute; bottom:0px; left:0px;}
 
-.blog_tags { width:256px; float:left; background-color:#fff; text-align:center; font-family:'Gotham-Book'; position:relative;    }
+.blog_tags { background-color:#fff; font-family:'Gotham-Book'; padding: 20px 0; margin: 10px 20px; color: red; box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.2) inset; }
+.blog_tags a{color: red; text-decoration: none;}
+.blog_tags a:hover{color: #B6081B; text-decoration: none;}
+.blog_tags .views-row::after{content: ""; display: block; height: 0; clear: both; visibility: hidden;}
+.blog_tags .views-label{margin-right: 10px; float:left;}
+.blog_tags .field-content{float: left;}
+
 .pinterest { width:256px; height:647px; float:left; background-color:#fff; text-align:center; font-family:'Gotham-Book'; position:relative; overflow:auto; padding-top: 9px;  }
 .pinterest h3 { display: inline-block; font-family:'Gotham-Book'; margin:0px; padding:33px 0px 15px 0px; color:#28aebd; font-size:13px; text-transform:uppercase; font-weight:normal; border-bottom:1px solid #d4d4d4; }
 .pinterest p { color:#717171; font-size:12px; padding:20px 0px 15px 0px; margin:0px;}
@@ -119,7 +129,7 @@ body{ background-color:#f3f3f3; padding:0px; margin:0px;}
 
 #page, #main-wrapper, #main-menu-links li a.active, #main-menu-links li.active-trail a {
     background: #ffffff none repeat scroll 0 0;
-     font-weight: bold !important; 
+     font-weight: bold;
 }
 
 #page, #main-wrapper, #main-menu-links li a.active, #main-menu-links li.active-trail a {
@@ -222,7 +232,7 @@ figure {
 .form-item-comment-body-und-0-format { display:none; }
 #comments label[for*="edit-author--"] { display:none; }
 #comments label[for*="edit-subject"] { display:none; }
-#comments label[for*="edit-name"] { display:none; } 
+#comments label[for*="edit-name"] { display:none; }
 
 .pager-load-more a{
     display: none;
@@ -290,12 +300,12 @@ body.not-front .blog_left span {
 @media only screen and ( max-width:768px) and (min-width:320px){
 	.menu { width:100%;}
 	.container  { width:100%;}
-	
+
 	.menu_icon { display:block; width:50px; height:50px; position:absolute; top:20px; right:20px; /* background-color:red; */ cursor:pointer; background-image:url(../images/menuSprite.png); background-position:left top; }
 	.menu_icon.hamIcon { display:block; width:50px; height:50px; position:absolute; top:20px; right:20px; cursor:pointer; background-position:left bottom; }
 	#block-system-main input[type="text"] {width:94% !important;}
 	.form_comments textarea {width:97%;}
-	
+
 	.nav li {
     float: left;
     list-style: none;
@@ -305,9 +315,9 @@ body.not-front .blog_left span {
     border-bottom: 1px solid #717171;
 }
 .nav li a {
-    
+
     padding: 5px 0px 0px 0px;
-    
+
 }
 
 .social_links {
@@ -373,7 +383,7 @@ body.not-front .blog_left span {
 
 .form_comments {
     width: 97%;
-    
+
     margin-top: 20px;
     padding: 0px;
     margin-left: 3%;
@@ -403,7 +413,7 @@ body.not-front .blog_left span {
 .item-list { display:none;}
 
 .box1 {
-    
+
     height: 306px;
     float: left;
     background-color: #fff;
@@ -429,8 +439,8 @@ input[type="text"] {
 
 
 
-	
-	
+
+
 }
 
 /* media ends */
@@ -524,7 +534,7 @@ ul.primary li a {
 .blog_right { width:720px; float:left;  background-color:#fff; text-align:center; font-family:'Gotham-Book'; position:relative;}
 .blog_right h3 { display: inline-block; font-family:'Gotham-Book'; margin:0px; padding:33px 0px 15px 0px; color:#28aebd; font-size:13px; text-transform:uppercase; font-weight:normal; border-bottom:1px solid #d4d4d4; }
 .blog_right p { color:#717171; font-size:12px; padding:20px 0px 15px 0px; margin:0px;}
-.blog_right h2 { font-family:'Gotham-Book'; margin:0px; padding:15px 10px 15px 10px; color:#717171 !important; font-size:20px; text-transform:uppercase; font-weight:normal;  }
+.blog_right h2 { font-family:'Gotham-Book'; margin:0px; padding:10px 10px 15px 10px; color:#717171 !important; font-size:20px; text-transform:uppercase; font-weight:normal;  }
 .blog_right h2 a { text-decoration:none; color:#717171 !important; text-transform:capitalize;}
 .blog_right h4 { font-family:'Gotham-Book'; margin:0px; padding:15px 15px 39px 15px; color:#e8503c; font-size:14px; text-transform:uppercase; font-weight:bold;  }
 
@@ -575,7 +585,7 @@ text-decoration:none;	 }
 }
 
 
-img { width:100% !important; height:auto !important;}
+img { max-width:100% ; height:auto;}
 
 
 
