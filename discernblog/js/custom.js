@@ -12,10 +12,12 @@ $(document).ready(function () {
     });
 	
 	if (window.location.pathname.trim() === "/blog" || window.location.pathname.trim() === "/blog/") {
+        var url = $('.pager-next a:eq(1)').attr("href").replace(/\d/, "");
 		$(window).scroll(function () {
 			if($(window).scrollTop() + $(window).height() > $(document).height() - 200) {
-				var url = $('.pager-next a:eq(1)').attr("href");
 				if (!isPaginationInProgress && currentPage < Drupal.settings.discernblog.max_pages) {
+                    url = url.replace(/\d/, "");
+                    url += currentPage;
 					$.ajax({
 						url: url,
 						success: function (response) {
