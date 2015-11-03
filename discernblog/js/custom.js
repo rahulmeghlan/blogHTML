@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
-	$(".menu_icon").click( function(){
-		$(this).toggleClass("hamIcon");
-		$(".all_menu").toggle();
-	});
+    $(".menu_icon").click(function () {
+        $(this).toggleClass("hamIcon");
+        $(".all_menu").toggle();
+    });
 
     var appendSignInInfo = function () {
         var $comments = $("#comments");
@@ -13,60 +13,84 @@ $(document).ready(function () {
         }
     };
 
-    appendSignInInfo();
+    var setCharacterCount = function () {
+        var $comment = $("#comment-form"),
+            $commentTextArea = $comment.find(".form-textarea"),
+            elem = '<p class="char-details">';
+        elem += ' Characters Remaining : <span class="count">0</span>/1000';
+        elem += '</p>';
+        $commentTextArea.attr("maxlength", 1000);
+        $commentTextArea.after(elem);
+
+        // Bind Event
+        $commentTextArea.on("keyup change", function (e) {
+            var totalChars = $(this).val().length;
+            if(totalChars <= 1000) {
+                $(".count").html(totalChars);
+            }
+        });
+    };
+
+    var pageLoad = function () {
+        appendSignInInfo();
+        setCharacterCount();
+    };
+
+    pageLoad();
+
 
     var isPaginationInProgress = false,
         currentPage = 1;
     $('.icon').click(function () {
         $('.search').toggleClass('expanded');
     });
-	
-	if (window.location.pathname.trim() === "/blog" || window.location.pathname.trim() === "/blog/") {
+
+    if (window.location.pathname.trim() === "/blog" || window.location.pathname.trim() === "/blog/") {
         var url = $('.pager-next a:eq(1)').attr("href").replace(/\d/, "");
-		$(window).scroll(function () {
-			if($(window).scrollTop() + $(window).height() > $(document).height() - 200) {
-				if (!isPaginationInProgress && currentPage < Drupal.settings.discernblog.max_pages) {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() + $(window).height() > $(document).height() - 200) {
+                if (!isPaginationInProgress && currentPage < Drupal.settings.discernblog.max_pages) {
                     url = url.replace(/\d/, "");
                     url += currentPage;
-					$.ajax({
-						url: url,
-						success: function (response) {
-							isPaginationInProgress = false;
-							var htmlPage = $.parseHTML(response);
-							//$(".view-content:eq(0)").append($((htmlPage)[htmlPage.length-2]).find(".blog_container"));
-							$(".view-content:eq(0)").append($((htmlPage)[htmlPage.length - 3]).find(".blog_container"));
-							
-							$('div .spon').filter(function() {
-							  return $.trim($(this).text()) === 'No'
-							}).hide();
+                    $.ajax({
+                        url: url,
+                        success: function (response) {
+                            isPaginationInProgress = false;
+                            var htmlPage = $.parseHTML(response);
+                            //$(".view-content:eq(0)").append($((htmlPage)[htmlPage.length-2]).find(".blog_container"));
+                            $(".view-content:eq(0)").append($((htmlPage)[htmlPage.length - 3]).find(".blog_container"));
 
-							$('div .spon').filter(function() {
-							  return $.trim($(this).text()) === ''
-							}).hide();
-	
-						}
-					});
-					++currentPage;
-				}
-				isPaginationInProgress = true;
+                            $('div .spon').filter(function () {
+                                return $.trim($(this).text()) === 'No'
+                            }).hide();
 
-			}
-		});
-	}
+                            $('div .spon').filter(function () {
+                                return $.trim($(this).text()) === ''
+                            }).hide();
 
-	$('div .spon').filter(function() {
-	  return $.trim($(this).text()) === 'No'
-	}).hide();
+                        }
+                    });
+                    ++currentPage;
+                }
+                isPaginationInProgress = true;
 
-	$('div .spon').filter(function() {
-	  return $.trim($(this).text()) === ''
-	}).hide();
+            }
+        });
+    }
 
-	$('p').filter(function() {
-	  return $.trim($(this).html()) === ''
-	}).hide();
-	
-	$( "#edit-search-block-form--2" ).addClass('search').removeClass('form-text');
+    $('div .spon').filter(function () {
+        return $.trim($(this).text()) === 'No'
+    }).hide();
+
+    $('div .spon').filter(function () {
+        return $.trim($(this).text()) === ''
+    }).hide();
+
+    $('p').filter(function () {
+        return $.trim($(this).html()) === ''
+    }).hide();
+
+    $("#edit-search-block-form--2").addClass('search').removeClass('form-text');
 
 });
 
