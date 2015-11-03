@@ -685,8 +685,8 @@ figure {
 
 .form_comments textarea {
     width: 100%;
-    height: 86px;
-    float: left;
+    /*height: 86px;*/
+    /*float: left;*/
     padding: 10px;
     border: 1px solid #c8c8c8;
     resize: none;
@@ -885,7 +885,7 @@ body.not-front .blog_left span {
     }
 
     .form_comments textarea {
-        width: 97%;
+        /*width: 97%;*/
     }
 
     .nav li {
@@ -1416,7 +1416,7 @@ img {
 #comments .social-signin .field-items .at4-icon {
     background-size: auto !important;
     height: 25px !important;
-    width: 85px !important;
+    width: 80px !important;
 }
 
 #comments .social-signin .field-items .aticon-facebook {
@@ -1453,6 +1453,9 @@ img {
     float: left;
 }
 
+.blog_right .form_comments p.char-details{
+    padding: 15px 0;
+}
 
 
 
