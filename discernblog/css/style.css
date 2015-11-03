@@ -834,9 +834,10 @@ body.not-front .blog_left span {
 }
 
 @media only screen and ( max-width: 768px) and (min-width: 320px) {
-    .region{
+    .region {
         float: none !important;
     }
+
     #main-menu-links a {
         color: #717171;
         font-size: 13px;
@@ -1344,17 +1345,18 @@ img {
     display: none;
 }
 
-.full-width-imp{
+.full-width-imp {
     width: auto;
     float: none;
 }
 
-
-.form-text { width: 96.5%;
+.form-text {
+    width: 96.5%;
     float: left;
     border: 1px solid #c8c8c8;
     padding: 10px;
-    margin: 10px 0px 0px 0px;}
+    margin: 10px 0px 0px 0px;
+}
 
 .search-results li {
     margin-bottom: 1em;
@@ -1362,14 +1364,44 @@ img {
     padding-bottom: 12px;
 }
 
-.region-content h2{ font-family: 'Gotham-Book'; width:100%;
+.region-content h2 {
+    font-family: 'Gotham-Book';
+    width: 100%;
     margin: 0px;
     padding: 30px 10px 15px 0px;
     color: #717171 !important;
     font-size: 20px;
     text-transform: uppercase;
-    font-weight: normal; float:left;}
+    font-weight: normal;
+    float: left;
+}
 
+.social-signin .title {
+    float: left;
+    padding: 12px 0;
+    margin-right: 10px;
+}
+
+.social-signin .field-name-field-social-buttons {
+    float: left;
+    padding: 5px 0;
+}
+
+#comments .social-signin .field-items .at4-icon {
+    background-size: auto !important;
+    height: 30px !important;
+    width: 100px !important;
+}
+
+#comments .social-signin .field-items .aticon-facebook {
+    background-image: url("../images/fb-login.png") !important;
+    background-color: transparent !important;
+}
+
+#comments .social-signin .field-items .aticon-twitter {
+    background-image: url("../images/twitter-login.png") !important;
+    background-color: transparent !important;
+}
 
 
 

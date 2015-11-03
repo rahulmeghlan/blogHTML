@@ -5,6 +5,16 @@ $(document).ready(function () {
 		$(".all_menu").toggle();
 	});
 
+    var appendSignInInfo = function () {
+        var $comments = $("#comments");
+        if ($comments.length) {
+            $comments.find("form").before($(".social-signin")[0]);
+            $(".aticon-facebook").css({"background-size": "auto !important"});
+        }
+    };
+
+    appendSignInInfo();
+
     var isPaginationInProgress = false,
         currentPage = 1;
     $('.icon').click(function () {
@@ -53,7 +63,7 @@ $(document).ready(function () {
 	}).hide();
 
 	$('p').filter(function() {
-	  return $.trim($(this).text()) === ''
+	  return $.trim($(this).html()) === ''
 	}).hide();
 	
 	$( "#edit-search-block-form--2" ).addClass('search').removeClass('form-text');
