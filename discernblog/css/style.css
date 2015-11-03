@@ -1138,7 +1138,7 @@ body.not-front .blog_left span {
     float: left;
     font: 13px/16px "Gotham-Book";
     color: #717171;
-    margin: 0 0 4px;
+    margin: 0 0 36px;
 }
 
 label {
@@ -1148,7 +1148,7 @@ label {
     float: left;
     width: 100%;
     color: #000;
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .region {
@@ -1350,11 +1350,25 @@ img {
 }
 
 
+.form-text { width: 96.5%;
+    float: left;
+    border: 1px solid #c8c8c8;
+    padding: 10px;
+    margin: 10px 0px 0px 0px;}
 
+.search-results li {
+    margin-bottom: 1em;
+    border-bottom: 1px solid #717171;
+    padding-bottom: 12px;
+}
 
-
-
-
+.region-content h2{ font-family: 'Gotham-Book'; width:100%;
+    margin: 0px;
+    padding: 30px 10px 15px 0px;
+    color: #717171 !important;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: normal; float:left;}
 
 
 
