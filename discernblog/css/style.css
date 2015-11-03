@@ -920,7 +920,15 @@ body.not-front .blog_left span {
         width: 100%;
     }
 
-    .blog_right h3 {
+    .blog_right .field-content h3, .blog_right .field-content h2 {
+        padding: 10px 0;
+    }
+
+    .blog_right .field-content h4 {
+        padding: 10px 0 15px 0;
+    }
+
+    .blog_right .field-content p {
         padding: 10px 0;
     }
 
