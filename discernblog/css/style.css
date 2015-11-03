@@ -951,7 +951,7 @@ body.not-front .blog_left span {
     }
 
     .box1 img {
-        width: 100%;
+        max-width: 100%;
     }
 
     .pinterest {
