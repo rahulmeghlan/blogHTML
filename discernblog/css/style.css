@@ -1106,6 +1106,22 @@ body.not-front .blog_left span {
 /* media ends */
 
 @media only screen and (max-width: 767px) {
+	
+	.node_art { border-top: 2.5px dotted #717171;
+    border-bottom: 2.5px dotted #717171;
+    margin: 3.5% !important;
+    width: 92% !important;
+    padding: 0px 0px 10px 0px !important;
+	line-height: 39px;
+	text-transform: capitalize !important;
+	}
+
+.node_art img { position: relative; width:auto !important;
+    top: 13px;
+    left: -12px; }
+	
+	
+	
     #block-system-main input[type="text"] {
         width: 90% !important;
     }
@@ -1404,9 +1420,18 @@ img {
 }
 
 
+.node_art { border-top: 2.5px dotted #717171;
+    border-bottom: 2.5px dotted #717171;
+    margin: 3.5% !important;
+    width: 92% !important;
+    padding: 0px 0px 10px 0px !important;
+	line-height: 39px;
+	text-transform: capitalize !important;
+	}
 
-
-
+.node_art img { position: relative;
+    top: 13px;
+    left: -12px; }
 
 
 
